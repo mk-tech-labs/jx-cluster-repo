@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - mk-tech-labs/jx-cluster-repo
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.34.71.64.216.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
