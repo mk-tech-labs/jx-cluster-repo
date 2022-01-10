@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: mk-tech-labs
+    provider: github
+    repository: mk-angular-io-qs
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: mk-tech-labs-mk-angular-io-qs
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/mk-tech-labs/mk-angular-io-qs.git
+  org: mk-tech-labs
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: mk-angular-io-qs
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/mk-tech-labs/mk-angular-io-qs
