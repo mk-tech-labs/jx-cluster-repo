@@ -5,28 +5,46 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: tf-jx-adequate-flounder
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "500061420680"
     kanikoFlags: --skip-unused-stages --snapshotMode=redo
+    project: engaged-reducer-287406
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: mk-tech-labs
+    repository: jx-cluster-repo
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: 34.71.64.216.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  kuberhealthy: true
+  pipelineUser:
+    username: mk-gh-bot
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-tf-jx-adequate-flounder-b90f7d7bf761
+  - name: reports
+    url: gs://reports-tf-jx-adequate-flounder-b90f7d7bf761
+  - name: repository
+    url: gs://repository-tf-jx-adequate-flounder-b90f7d7bf761
   vault: {}
   webhook: lighthouse
